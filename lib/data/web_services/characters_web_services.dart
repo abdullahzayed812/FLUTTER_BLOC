@@ -19,7 +19,7 @@ class CharactersWebServices {
   Future<List<Character>> getCharacters() async {
     try {
       Response response = await dio.get(users);
-      print(response.data);
+      // print(response.data);
       return response.data;
     } catch (e) {
       print(e);

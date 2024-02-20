@@ -9,6 +9,7 @@ class CharactersRepository {
   Future<List<Character>> getCharacters() async {
     try {
       final characters = await charactersWebServices.getCharacters();
+
       return characters
           .map((character) =>
               Character.fromJson(character as Map<String, dynamic>))
