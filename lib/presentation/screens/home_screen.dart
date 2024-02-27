@@ -28,8 +28,6 @@ class _HomePageState extends State<HomePage> {
       if (state is CharactersLoaded) {
         characters = state.characters;
 
-        // print(characters);
-
         return _buildListWidgets();
       } else {
         return _showLoading();
