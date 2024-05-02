@@ -18,4 +18,19 @@ class Character {
     website = json["website"];
     company = json["company"];
   }
+
+  Map<String, dynamic> toJson() {
+    Map<String, dynamic> data = <String, dynamic>{};
+
+    data['id'] = id;
+    data['name'] = name;
+    data['username'] = username;
+    data['email'] = email;
+    data['address'] = address;
+    data['phone'] = phone;
+    data['website'] = website;
+    data['company'] = company;
+
+    return data;
+  }
 }

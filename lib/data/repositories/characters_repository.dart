@@ -11,8 +11,7 @@ class CharactersRepository {
       final characters = await charactersWebServices.getCharacters();
 
       return characters
-          .map((character) =>
-              Character.fromJson(character as Map<String, dynamic>))
+          .map((character) => Character.fromJson(character.toJson()))
           .toList();
     } catch (e) {
       print(e);
