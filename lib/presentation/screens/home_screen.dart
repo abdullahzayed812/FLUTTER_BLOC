@@ -58,11 +58,13 @@ class _HomePageState extends State<HomePage> {
       shrinkWrap: true,
       physics: const ClampingScrollPhysics(),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          childAspectRatio: 2 / 3,
-          crossAxisSpacing: 1,
-          mainAxisSpacing: 1),
-      itemBuilder: (context, index) => const CharacterItem(),
+        crossAxisCount: 2,
+        childAspectRatio: 2 / 3,
+        mainAxisSpacing: 2,
+        crossAxisSpacing: 2,
+      ),
+      itemBuilder: (context, index) =>
+          CharacterItem(name: characters[index].name),
     );
   }
 

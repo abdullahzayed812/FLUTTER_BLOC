@@ -10,12 +10,10 @@ class CharactersRepository {
     try {
       final characters = await charactersWebServices.getCharacters();
 
-      return characters
-          .map((character) => Character.fromJson(character.toJson()))
-          .toList();
+      return characters;
     } catch (e) {
       print(e);
-      return [];
     }
+    return [];
   }
 }

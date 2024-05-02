@@ -3,10 +3,10 @@ class Character {
   late final String name;
   late final String username;
   late final String email;
-  late final Map<String, String> address;
+  late final Map<String, dynamic> address;
   late final String phone;
   late final String website;
-  late final Map<String, String> company;
+  late final Map<String, dynamic> company;
 
   Character.fromJson(Map<String, dynamic> json) {
     id = json["id"];
